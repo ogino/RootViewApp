@@ -1,9 +1,9 @@
-    //
+//
 //  TabBarController.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/11/25.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/11/25.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "TabBarController.h"
@@ -40,6 +40,10 @@
 	UINavigationController* wrapViewNavigation = [[[UINavigationController alloc] initWithRootViewController:wrapViewControllet] autorelease];
 	wrapViewNavigation.navigationBar.barStyle = UIBarStyleBlack;
 
+	DismissViewController* dismissViewController = [[[DismissViewController alloc] init] autorelease];
+	UINavigationController* dismissNavigation = [[[UINavigationController alloc] initWithRootViewController:dismissViewController] autorelease];
+	dismissNavigation.navigationBar.barStyle = UIBarStyleBlack;
+
 	NSMutableArray* viewControllers = [NSMutableArray array];
 	[viewControllers addObject:tableViewNavigation];
 	[viewControllers addObject:labelViewNavigation];
@@ -47,6 +51,7 @@
 	[viewControllers addObject:imageViewNavigation];
 	[viewControllers addObject:webViewNavigation];
 	[viewControllers addObject:wrapViewNavigation];
+	[viewControllers addObject:dismissNavigation];
 	return viewControllers;
 }
 

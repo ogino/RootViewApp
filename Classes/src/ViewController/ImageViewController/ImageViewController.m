@@ -1,9 +1,9 @@
-    //
+//
 //  ImageViewController.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/09/16.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/09/16.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "ImageViewController.h"

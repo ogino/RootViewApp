@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/09/16.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/09/16.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 	RootViewController* rootViewController = [[RootViewController alloc] init];
-	rootViewController.logined = NO;
+	rootViewController.logined = YES;
 
 	[self.window addSubview:rootViewController.view];
 	[self.window makeKeyAndVisible];

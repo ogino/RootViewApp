@@ -1,9 +1,9 @@
-    //
+//
 //  WrapViewController.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/11/25.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/11/25.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "WrapViewController.h"
@@ -20,7 +20,7 @@
     return self;
 }
 
-- (id) init {
+- (id)init {
 	if ((self = [super initWithNibName:nil bundle:nil])) {
         self.title = @"WrapView";
 		self.tabBarItem.image = [UIImage imageNamed:@"wrap"];
@@ -30,6 +30,12 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+	CGRect rectFrame = [UIScreen mainScreen].applicationFrame;
+	self.view = [[[UIView alloc] initWithFrame:rectFrame] autorelease];
+	self.view.backgroundColor = [UIColor whiteColor];
+	self.view.autoresizesSubviews = YES;
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+	self.view.clipsToBounds = YES;
 }
 
 

@@ -1,9 +1,9 @@
-    //
+//
 //  LabelViewController.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/09/16.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/09/16.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "LabelViewController.h"
@@ -16,12 +16,12 @@
 @synthesize modalView = modalView_;
 @synthesize text = text_;
 
-- (void) showIndicator:(NSNumber*) number {
+- (void)showIndicator:(NSNumber*)number {
 	BOOL enable = [number boolValue];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = enable;
 }
 
-- (void) createText {
+- (void)createText {
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.new-akiba.com/"]];
 	NSHTTPURLResponse* response = nil;
@@ -34,11 +34,11 @@
 	[pool release];
 }
 
-- (void) drawLabelView {
+- (void)drawLabelView {
 	self.label.text = self.text;
 }
 
-- (void)fetchedText:(NSNotification*) notification {
+- (void)fetchedText:(NSNotification*)notification {
 	[self performSelectorOnMainThread:@selector(drawLabelView) withObject:nil waitUntilDone:YES];
 	[self.modalView setHidden:YES];
 	[self showIndicator:[NSNumber numberWithBool:NO]];
@@ -56,7 +56,7 @@
     return self;
 }
 
-- (id) init {
+- (id)init {
 	if ((self = [super initWithNibName:nil bundle:nil])) {
         self.title = @"LabelView";
 		self.tabBarItem.image = [UIImage imageNamed:@"label"];

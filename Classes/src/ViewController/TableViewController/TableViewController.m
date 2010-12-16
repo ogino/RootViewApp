@@ -2,8 +2,8 @@
 //  TableViewController.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/09/17.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/09/17.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "TableViewController.h"
@@ -15,12 +15,12 @@
 @synthesize cell = cell_;
 @synthesize sections = sections_;
 
-- (void) showIndicator:(NSNumber*) number {
+- (void)showIndicator:(NSNumber*)number {
 	BOOL enable = [number boolValue];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = enable;
 }
 
-- (void) createSections {
+- (void)createSections {
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	NSMutableDictionary* sections = [NSMutableDictionary dictionary];
 	for (NSUInteger i = 0; i < 10; i++) {
@@ -54,7 +54,7 @@
 }
 
 
-- (id) init {
+- (id)init {
 	if ((self = [super initWithStyle:UITableViewStylePlain])) {
         self.title = @"TableView";
 		self.tabBarItem.image = [UIImage imageNamed:@"table"];

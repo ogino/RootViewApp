@@ -1,9 +1,9 @@
-    //
+//
 //  WebViewController.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/09/16.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/09/16.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "WebViewController.h"
@@ -13,7 +13,7 @@
 
 @synthesize webView = webView_;
 
-- (void) showIndicator:(NSNumber*) number {
+- (void)showIndicator:(NSNumber*)number {
 	BOOL enable = [number boolValue];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = enable;
 }
@@ -30,7 +30,7 @@
     return self;
 }
 
-- (id) init {
+- (id)init {
 	if ((self = [super initWithNibName:nil bundle:nil])) {
         self.title = @"WebView";
 		self.tabBarItem.image = [UIImage imageNamed:@"web"];

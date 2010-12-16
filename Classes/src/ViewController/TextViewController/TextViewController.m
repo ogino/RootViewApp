@@ -1,9 +1,9 @@
-    //
+//
 //  TextViewController.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/09/16.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/09/16.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "TextViewController.h"
@@ -15,12 +15,12 @@
 @synthesize modalView = modalView_;
 @synthesize text = text_;
 
-- (void) showIndicator:(NSNumber*) number {
+- (void)showIndicator:(NSNumber*)number {
 	BOOL enable = [number boolValue];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = enable;
 }
 
-- (void) createText {
+- (void)createText {
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.new-akiba.com"]];
 	NSHTTPURLResponse* response = nil;
@@ -33,7 +33,7 @@
 	[pool release];
 }
 
-- (void) drawTextView {
+- (void)drawTextView {
 	self.textView.text = self.text;
 }
 
@@ -55,7 +55,7 @@
     return self;
 }
 
-- (id) init {
+- (id)init {
 	if ((self = [super initWithNibName:nil bundle:nil])) {
         self.title = @"TextView";
 		self.tabBarItem.image = [UIImage imageNamed:@"text"];

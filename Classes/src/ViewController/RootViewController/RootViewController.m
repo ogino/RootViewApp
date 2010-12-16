@@ -2,8 +2,8 @@
 //  RootViewController.m
 //  RootViewApp
 //
-//  Created by miyabichan on 10/09/16.
-//  Copyright 2010 Miyabi Co.,Ltd. All rights reserved.
+//  Created by Tadashi Ogino on 10/09/16.
+//  Copyright 2010 Tadashi Ogino Co.,Ltd. All rights reserved.
 //
 
 #import "RootViewController.h"
@@ -17,14 +17,14 @@
 @synthesize tabBarController = tabBarController_;
 @synthesize logined = logined_;
 
-- (void) showIndicator:(NSNumber*) number {
+- (void)showIndicator:(NSNumber*)number {
 	NSAutoreleasePool* pool =[[NSAutoreleasePool alloc] init];
 	BOOL enable = [number boolValue];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = enable;
 	[pool release];
 }
 
-- (void) createLoginView {
+- (void)createLoginView {
 	self.loginView = [[[UIView alloc] initWithFrame:self.view.bounds] autorelease];
 	self.loginView.backgroundColor = [[UIColor magentaColor] colorWithAlphaComponent:0.5];
 	self.loginView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -39,7 +39,7 @@
 	[self.loginView addSubview:self.button];
 }
 
-- (void) createViews {
+- (void)createViews {
 	CGRect rectFrame = [UIScreen mainScreen].applicationFrame;
 	self.view = [[[UIView alloc] initWithFrame:rectFrame] autorelease];
 	self.view.backgroundColor = [UIColor whiteColor];
@@ -62,7 +62,7 @@
 	[indicator startAnimating];
 }
 
-- (void) createTabBarController {
+- (void)createTabBarController {
 	self.tabBarController = [[[TabBarController alloc] init] autorelease];
 }
 
@@ -73,14 +73,14 @@
 	[pool release];
 }
 
-- (void) prepareLogin {
+- (void)prepareLogin {
 	[self performSelectorInBackground:@selector(beginIndicate) withObject:nil];
 	self.logined = YES;
 	[self viewWillAppear:YES];
 	[self viewDidAppear:YES];
 }
 
-- (void) proceedLogin {
+- (void)proceedLogin {
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	[NSThread sleepForTimeInterval:5u];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"ROOT VIEW" object:nil];
@@ -129,13 +129,8 @@
 	[self createLoginView];
 	[self createTabBarController];
 
-	if (self.logined) {
-		[self.loginView setHidden:YES];
-		[self.view addSubview:self.modalView];
-	} else {
-		[self.view addSubview:self.loginView];
-		[self.loginView addSubview:self.modalView];
-	}
+	[self.view addSubview:self.loginView];
+	[self.loginView addSubview:self.modalView];
 
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(prepareDone:) name:@"ROOT VIEW" object:nil];
 }
