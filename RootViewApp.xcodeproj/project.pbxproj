@@ -30,6 +30,8 @@
 		888FA0CD1241F002001AAAD6 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888FA0CC1241F002001AAAD6 /* TextViewController.m */; };
 		888FA0EE1241F5D3001AAAD6 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 888FA0ED1241F5D3001AAAD6 /* image.png */; };
 		888FA23012420E15001AAAD6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 888FA22F12420E15001AAAD6 /* Default.png */; };
+		889B079512B9BBFF00BCD433 /* DismissViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889B079412B9BBFF00BCD433 /* DismissViewController.m */; };
+		889B079F12B9BC6D00BCD433 /* dissmiss.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B079E12B9BC6D00BCD433 /* dissmiss.png */; };
 		88EAA5BA129DFAC9000181C2 /* WrapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA5B9129DFAC9000181C2 /* WrapViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,9 @@
 		888FA0CC1241F002001AAAD6 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		888FA0ED1241F5D3001AAAD6 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		888FA22F12420E15001AAAD6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		889B079312B9BBFF00BCD433 /* DismissViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissViewController.h; sourceTree = "<group>"; };
+		889B079412B9BBFF00BCD433 /* DismissViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissViewController.m; sourceTree = "<group>"; };
+		889B079E12B9BC6D00BCD433 /* dissmiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dissmiss.png; sourceTree = "<group>"; };
 		88EAA5B8129DFAC9000181C2 /* WrapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrapViewController.h; sourceTree = "<group>"; };
 		88EAA5B9129DFAC9000181C2 /* WrapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrapViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* RootViewApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RootViewApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -142,13 +147,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		880087241242327800ADF4B2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		881D598D129E545A0008A318 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +188,6 @@
 				888F9FCD1241A8BD001AAAD6 /* Delegate */,
 				29B97315FDCFA39411CA2CEA /* main */,
 				881D598D129E545A0008A318 /* Model */,
-				880087241242327800ADF4B2 /* View */,
 				888FA00F1241AC1F001AAAD6 /* ViewController */,
 			);
 			path = src;
@@ -216,6 +213,7 @@
 		888FA00F1241AC1F001AAAD6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				889B079212B9BBE800BCD433 /* DismissViewController */,
 				888FA04E1241E000001AAAD6 /* ImageViewController */,
 				888FA0561241E011001AAAD6 /* LabelViewController */,
 				888F9FCE1241A8D0001AAAD6 /* RootViewController */,
@@ -286,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				884CD5871242FC9D0037E5D4 /* cell@2x.png */,
+				889B079E12B9BC6D00BCD433 /* dissmiss.png */,
 				888FA0ED1241F5D3001AAAD6 /* image.png */,
 				884CD4211242DACD0037E5D4 /* label.png */,
 				884CD46A1242E1E50037E5D4 /* table.png */,
@@ -311,6 +310,15 @@
 				881D5A21129E68540008A318 /* sun@2x.png */,
 			);
 			path = ViewImage;
+			sourceTree = "<group>";
+		};
+		889B079212B9BBE800BCD433 /* DismissViewController */ = {
+			isa = PBXGroup;
+			children = (
+				889B079312B9BBFF00BCD433 /* DismissViewController.h */,
+				889B079412B9BBFF00BCD433 /* DismissViewController.m */,
+			);
+			path = DismissViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +347,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = "Miyabi Co.,Ltd.";
+				ORGANIZATIONNAME = "Tadashi Ogino Co.,Ltd.";
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RootViewApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -367,15 +375,16 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				888FA01B1241B006001AAAD6 /* RootViewController.xib in Resources */,
-				888FA0C41241EE8E001AAAD6 /* web.png in Resources */,
-				888FA0EE1241F5D3001AAAD6 /* image.png in Resources */,
+				884CD5881242FC9D0037E5D4 /* cell@2x.png in Resources */,
 				888FA23012420E15001AAAD6 /* Default.png in Resources */,
-				884CD3F81242D7890037E5D4 /* text.png in Resources */,
+				889B079F12B9BC6D00BCD433 /* dissmiss.png in Resources */,
+				888FA0EE1241F5D3001AAAD6 /* image.png in Resources */,
 				884CD4221242DACD0037E5D4 /* label.png in Resources */,
 				884CD46B1242E1E50037E5D4 /* table.png in Resources */,
-				884CD5881242FC9D0037E5D4 /* cell@2x.png in Resources */,
-				881D583B129E46920008A318 /* wrap.png in Resources */,
 				881D5A22129E68540008A318 /* sun@2x.png in Resources */,
+				884CD3F81242D7890037E5D4 /* text.png in Resources */,
+				888FA0C41241EE8E001AAAD6 /* web.png in Resources */,
+				881D583B129E46920008A318 /* wrap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,16 +395,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
-				888FA0201241B27C001AAAD6 /* RootViewController.m in Sources */,
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				889B079512B9BBFF00BCD433 /* DismissViewController.m in Sources */,
 				888FA0591241E075001AAAD6 /* ImageViewController.m in Sources */,
 				888FA05C1241E090001AAAD6 /* LabelViewController.m in Sources */,
-				888FA0621241E147001AAAD6 /* WebViewController.m in Sources */,
-				888FA0CD1241F002001AAAD6 /* TextViewController.m in Sources */,
-				884CD4691242DF790037E5D4 /* TableViewController.m in Sources */,
-				88EAA5BA129DFAC9000181C2 /* WrapViewController.m in Sources */,
+				888FA0201241B27C001AAAD6 /* RootViewController.m in Sources */,
 				881D5994129E54CB0008A318 /* TabBarController.m in Sources */,
+				884CD4691242DF790037E5D4 /* TableViewController.m in Sources */,
+				888FA0CD1241F002001AAAD6 /* TextViewController.m in Sources */,
+				888FA0621241E147001AAAD6 /* WebViewController.m in Sources */,
+				88EAA5BA129DFAC9000181C2 /* WrapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
