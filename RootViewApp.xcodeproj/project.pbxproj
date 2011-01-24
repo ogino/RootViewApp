@@ -150,7 +150,6 @@
 		881D598D129E545A0008A318 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				881D5991129E54B20008A318 /* TabBarController */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +216,7 @@
 				888FA04E1241E000001AAAD6 /* ImageViewController */,
 				888FA0561241E011001AAAD6 /* LabelViewController */,
 				888F9FCE1241A8D0001AAAD6 /* RootViewController */,
+				881D5991129E54B20008A318 /* TabBarController */,
 				888FA0CE1241F007001AAAD6 /* TableViewController */,
 				888FA04C1241DFDF001AAAD6 /* TextViewController */,
 				888FA04D1241DFF3001AAAD6 /* WebViewController */,
