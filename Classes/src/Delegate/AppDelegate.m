@@ -11,7 +11,7 @@
 @implementation AppDelegate
 
 @synthesize window = window_;
-@synthesize tabBarController = tabBarController_;
+@synthesize rootViewController = rootViewController_;
 
 
 #pragma mark -
@@ -19,10 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-	RootViewController* rootViewController = [[RootViewController alloc] init];
-	rootViewController.logined = YES;
+	self.rootViewController = [[[RootViewController alloc] init] autorelease];
+	self.rootViewController.logined = YES;
 
-	[self.window addSubview:rootViewController.view];
+	[self.window addSubview:self.rootViewController.view];
 	[self.window makeKeyAndVisible];
 
     return YES;
@@ -79,7 +79,7 @@
 
 - (void)dealloc {
     self.window = nil;
-	self.tabBarController = nil;
+	self.rootViewController = nil;
 
     [super dealloc];
 }

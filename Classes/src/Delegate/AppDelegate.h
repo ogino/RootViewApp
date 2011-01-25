@@ -15,12 +15,13 @@
 #import "TableViewController.h"
 
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window_;
-	UITabBarController* tabBarController_;
+@private
+    UIWindow* window_;
+	RootViewController* rootViewController_;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) UITabBarController* tabBarController;
+@property (nonatomic, retain) IBOutlet UIWindow* window;
+@property (nonatomic, retain) RootViewController* rootViewController;
 
 @end
 

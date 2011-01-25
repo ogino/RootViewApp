@@ -7,6 +7,7 @@
 //
 
 #import "DismissViewController.h"
+#import "AppDelegate.h"
 
 
 @implementation DismissViewController
@@ -15,11 +16,17 @@
 @synthesize button = button_;
 
 
-- (void)logout {
+- (void) resetTabViewController {
 	[self.parentViewController.tabBarController setSelectedIndex:0u];
 	[self.view removeFromSuperview];
 	[self.parentViewController.view removeFromSuperview];
 	[self.parentViewController.tabBarController.view removeFromSuperview];
+}
+
+- (void)logout {
+	[self resetTabViewController];
+	AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+	[delegate.window addSubview:delegate.rootViewController.view];
 }
 
 #pragma mark -
@@ -77,7 +84,8 @@
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
 
 - (void)viewDidUnload {

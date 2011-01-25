@@ -147,13 +147,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		881D598D129E545A0008A318 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		881D5991129E54B20008A318 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +179,6 @@
 			children = (
 				888F9FCD1241A8BD001AAAD6 /* Delegate */,
 				29B97315FDCFA39411CA2CEA /* main */,
-				881D598D129E545A0008A318 /* Model */,
 				888FA00F1241AC1F001AAAD6 /* ViewController */,
 			);
 			path = src;
@@ -396,10 +388,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				889B079512B9BBFF00BCD433 /* DismissViewController.m in Sources */,
 				888FA0591241E075001AAAD6 /* ImageViewController.m in Sources */,
 				888FA05C1241E090001AAAD6 /* LabelViewController.m in Sources */,
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				888FA0201241B27C001AAAD6 /* RootViewController.m in Sources */,
 				881D5994129E54CB0008A318 /* TabBarController.m in Sources */,
 				884CD4691242DF790037E5D4 /* TableViewController.m in Sources */,

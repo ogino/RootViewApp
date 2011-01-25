@@ -7,7 +7,7 @@
 //
 
 #import "RootViewController.h"
-
+#import "AppDelegate.h"
 
 @implementation RootViewController
 
@@ -90,8 +90,7 @@
 - (void)changeViewController {
 	UIWindow* window = [(AppDelegate*)[[UIApplication sharedApplication] delegate] window];
 	[window addSubview:self.tabBarController.view];
-	[window bringSubviewToFront:self.tabBarController.view];
-	[window makeKeyAndVisible];
+	[self.view removeFromSuperview];
 }
 
 - (void)prepareDone:(NSNotification*) notification {
@@ -163,12 +162,14 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
+	self.logined = NO;
 }
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
 
 

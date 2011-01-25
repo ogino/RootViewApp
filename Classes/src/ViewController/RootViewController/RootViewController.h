@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "TabBarController.h"
-#import "AppDelegate.h"
 
 
 @interface RootViewController : UIViewController {
