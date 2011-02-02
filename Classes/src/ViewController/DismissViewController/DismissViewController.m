@@ -16,8 +16,7 @@
 @synthesize button = button_;
 
 
-- (void) resetTabViewController {
-	[self.parentViewController.tabBarController setSelectedIndex:0u];
+- (void)resetTabViewController {
 	[self.view removeFromSuperview];
 	[self.parentViewController.view removeFromSuperview];
 	[self.parentViewController.tabBarController.view removeFromSuperview];
@@ -43,8 +42,8 @@
 
 - (id)init {
 	if ((self = [super initWithNibName:nil bundle:nil])) {
-        self.title = @"DissmissView";
-		self.tabBarItem.image = [UIImage imageNamed:@"dissmiss"];
+        self.title = @"DismissView";
+		self.tabBarItem.image = [UIImage imageNamed:@"dismiss"];
 	}
     return self;
 }
@@ -55,12 +54,19 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+	[super loadView];
+
 	CGRect rectFrame = [UIScreen mainScreen].applicationFrame;
 	self.view = [[[UIView alloc] initWithFrame:rectFrame] autorelease];
 	self.view.backgroundColor = [UIColor whiteColor];
 	self.view.autoresizesSubviews = YES;
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 	self.view.clipsToBounds = YES;
+}
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
 
 	self.logoutView = [[[UIView alloc] initWithFrame:self.view.bounds] autorelease];
 	self.logoutView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
@@ -74,11 +80,6 @@
 	self.button.center = self.logoutView.center;
 	[self.button addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
 	[self.logoutView addSubview:self.button];
-}
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
 }
 
 // Override to allow orientations other than the default portrait orientation.
