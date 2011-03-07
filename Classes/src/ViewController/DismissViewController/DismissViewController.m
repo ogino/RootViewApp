@@ -20,6 +20,9 @@
 	[self.view removeFromSuperview];
 	[self.parentViewController.view removeFromSuperview];
 	[self.parentViewController.tabBarController.view removeFromSuperview];
+	self.parentViewController.tabBarController.view = nil;
+	self.parentViewController.view = nil;
+	self.view = nil;
 }
 
 - (void)logout {
