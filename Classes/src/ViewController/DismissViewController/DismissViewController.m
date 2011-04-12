@@ -23,12 +23,14 @@
 	self.parentViewController.tabBarController.view = nil;
 	self.parentViewController.view = nil;
 	self.view = nil;
+	self.parentViewController.tabBarController.selectedIndex = 0u;
 }
 
 - (void)logout {
 	[self resetTabViewController];
 	AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-	[delegate.window addSubview:delegate.rootViewController.view];
+	UIWindow* window = [[UIApplication sharedApplication] keyWindow];
+	[window addSubview:delegate.rootViewController.view];
 }
 
 #pragma mark -

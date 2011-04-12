@@ -96,7 +96,7 @@
 - (void)prepareDone:(NSNotification*) notification {
 	[self.modalView setHidden:YES];
 	[self showIndicator:[NSNumber numberWithBool:NO]];
-	[self changeViewController];
+	[self performSelectorOnMainThread:@selector(changeViewController) withObject:nil waitUntilDone:NO];
 }
 
 
